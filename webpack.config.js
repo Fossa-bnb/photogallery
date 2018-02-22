@@ -1,6 +1,7 @@
 
 
 module.exports = {
+  devtool: 'inline-source-map',
   entry: [
     './client/src/index.js',
   ],
