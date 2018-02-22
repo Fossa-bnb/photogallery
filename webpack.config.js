@@ -1,6 +1,8 @@
+
+
 module.exports = {
   entry: [
-    './src/index.js',
+    './client/src/index.js',
   ],
   module: {
     rules: [
@@ -15,10 +17,11 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
   },
   output: {
-    path: `${__dirname} /dist`,
-    publicPath: '/',
+    path: `${__dirname}/dist`,
+    // publicPath: '/',
     filename: 'bundle.js',
   },
+  watch: true,
   devServer: {
     contentBase: './dist',
   },
