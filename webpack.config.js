@@ -1,5 +1,3 @@
-
-
 module.exports = {
   devtool: 'inline-source-map',
   entry: [

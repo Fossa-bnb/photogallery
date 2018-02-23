@@ -8,7 +8,8 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --config ./webpack.config.js"
+    "start": "webpack-dev-server --progress --colors --config ./webpack.config.js",
+    "seed": "node ./db/seed-db.js"
   },
   "babel": {
     "presets": [
