@@ -1,18 +1,6 @@
 const db = require('./index.js');
 const mongoose = require('mongoose');
-
-const Schema = mongoose.Schema;
-
-const roomSchema = new Schema({
-  roomId: Number,
-  photos: [{ photoId: Number, url: String, caption: String }],
-});
-
-
-const Room = mongoose.model('Room', roomSchema);
-Room.ensureIndexes((err) => {
-  if (err) return (err);
-});
+const Room = require('./roomSchema');
 
 const seedDb = () => {
   Room.remove({}, (err) => {
