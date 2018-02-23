@@ -6,9 +6,8 @@ const Schema = mongoose.Schema;
 const roomSchema = new Schema({
   roomId: Number,
   photos: [{ photoId: Number, url: String, caption: String }],
-}, { autoIndex: false });
+});
 
-roomSchema.set('autoIndex', false);
 
 const Room = mongoose.model('Room', roomSchema);
 Room.ensureIndexes((err) => {
