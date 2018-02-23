@@ -1,8 +1,11 @@
 const db = require('./index.js');
 const mongoose = require('mongoose');
 const Room = require('./roomSchema');
+const Promise = require('bluebird');
+
 
 const seedDb = () => {
+
   Room.remove({}, (err) => {
     if (err) {
       return err;
@@ -112,6 +115,8 @@ const seedDb = () => {
 
   const imageUrlsSource = ['https://images.pexels.com/photos/104827/cat-pet-an…104827.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb', 'https://images.pexels.com/photos/416160/pexels-pho…416160.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb', 'https://images.pexels.com/photos/127028/pexels-pho…127028.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb', 'https://images.pexels.com/photos/4602/jumping-cute…animals.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb', 'https://images.pexels.com/photos/248280/pexels-pho…248280.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb', 'https://images.pexels.com/photos/7517/animal-sitti…-inside.jpg?h=350&dpr=2&auto=compress&cs=tinysrgb', 'http://lorempixel.com/400/600/animals/8/', 'http://lorempixel.com/400/600/abstract/3/', 'http://lorempixel.com/400/600/abstract/7/', 'http://lorempixel.com/400/600/abstract/4/', 'http://lorempixel.com/400/600/abstract/5/', 'http://lorempixel.com/400/600/abstract/1/', 'http://lorempixel.com/400/600/abstract/2/', 'http://lorempixel.com/400/600/animals/7/', 'http://lorempixel.com/400/600/animals/6/', 'http://lorempixel.com/400/600/animals/5/', 'http://lorempixel.com/400/600/animals/4/', 'http://lorempixel.com/400/600/animals/3/', 'http://lorempixel.com/400/600/animals/2/', 'http://lorempixel.com/400/600/animals/8/', 'http://lorempixel.com/400/600/animals/1/', 'http://lorempixel.com/400/600/animals/9/', 'http://lorempixel.com/400/600/cats/7/', 'http://lorempixel.com/400/600/cats/3/', 'http://lorempixel.com/400/600/city/4/', 'http://lorempixel.com/400/600/city/8/', 'http://lorempixel.com/400/600/city/2/', 'http://lorempixel.com/400/600/city/1/', 'http://lorempixel.com/400/600/city/5/', 'http://lorempixel.com/400/600/city/6/', 'http://lorempixel.com/400/600/city/9/', 'http://lorempixel.com/400/600/city/10/', 'http://lorempixel.com/400/600/sports/1/', 'http://lorempixel.com/400/600/sports/2/', 'http://lorempixel.com/400/600/sports/3/', 'http://lorempixel.com/400/600/sports/4/', 'http://lorempixel.com/400/600/sports/5/', 'http://lorempixel.com/400/600/sports/6/', 'http://lorempixel.com/400/600/sports/7/', 'http://lorempixel.com/400/600/sports/8/', 'http://lorempixel.com/400/600/sports/9/', 'http://lorempixel.com/400/600/fashion/1/', 'http://lorempixel.com/400/600/fashion/2/', 'http://lorempixel.com/400/600/fashion/3/', 'http://lorempixel.com/400/600/fashion/4/', 'http://lorempixel.com/400/600/fashion/5/', 'http://lorempixel.com/400/600/fashion/6/', 'http://lorempixel.com/400/600/fashion/7/', 'http://lorempixel.com/400/600/fashion/8/', 'http://lorempixel.com/400/600/fashion/9/', 'http://lorempixel.com/400/600/nature/1/', 'http://lorempixel.com/400/600/nature/2/', 'http://lorempixel.com/400/600/nature/3/', 'http://lorempixel.com/400/600/nature/4/', 'http://lorempixel.com/400/600/nature/5/', 'http://lorempixel.com/400/600/nature/6/', 'http://lorempixel.com/400/600/nature/7/', 'http://lorempixel.com/400/600/nature/8/', 'http://lorempixel.com/400/600/nature/9/', 'http://lorempixel.com/400/600/nature/10/', 'http://lorempixel.com/400/600/food/1/', 'http://lorempixel.com/400/600/food/2/', 'http://lorempixel.com/400/600/food/3/', 'http://lorempixel.com/400/600/food/4/', 'http://lorempixel.com/400/600/food/5/', 'http://lorempixel.com/400/600/food/6/', 'http://lorempixel.com/400/600/food/7/', 'http://lorempixel.com/400/600/food/8/', 'http://lorempixel.com/400/600/food/9/', 'http://lorempixel.com/400/600/food/10/', 'http://lorempixel.com/400/600/nightlife/1/', 'http://lorempixel.com/400/600/nightlife/2/', 'http://lorempixel.com/400/600/nightlife/3/', 'http://lorempixel.com/400/600/nightlife/4/', 'http://lorempixel.com/400/600/nightlife/5/', 'http://lorempixel.com/400/600/nightlife/6/', 'http://lorempixel.com/400/600/nightlife/7/', 'http://lorempixel.com/400/600/nightlife/8/', 'http://lorempixel.com/400/600/nightlife/9/', 'http://lorempixel.com/400/600/nightlife/10/', 'http://lorempixel.com/400/600/technics/1/', 'http://lorempixel.com/400/600/technics/2/', 'http://lorempixel.com/400/600/technics/3/', 'http://lorempixel.com/400/600/technics/4/', 'http://lorempixel.com/400/600/technics/5/', 'http://lorempixel.com/400/600/technics/6/', 'http://lorempixel.com/400/600/technics/7/', 'http://lorempixel.com/400/600/technics/8/', 'http://lorempixel.com/400/600/technics/9/', 'http://lorempixel.com/400/600/technics/10/', 'http://lorempixel.com/400/600/transport/1/', 'http://lorempixel.com/400/600/transport/2/', 'http://lorempixel.com/400/600/transport/3/', 'http://lorempixel.com/400/600/transport/4/', 'http://lorempixel.com/400/600/transport/5/', 'http://lorempixel.com/400/600/transport/6/', 'http://lorempixel.com/400/600/transport/7/', 'http://lorempixel.com/400/600/transport/8/', 'http://lorempixel.com/400/600/transport/9/', 'http://lorempixel.com/400/600/transport/10/'];
 
+  const rooms = [];
+
   for (let i = 1; i <= 100; i += 1) {
     const numPhotos = Math.floor(Math.random() * 10) + 2;
     const photosArray = [];
@@ -129,13 +134,29 @@ const seedDb = () => {
       roomId: i,
       photos: photosArray,
     });
-
-    room.save((err) => {
-      if (err) return console.error(err);
-      console.log(`Saved room with id ${room.roomId}`);
-    });
+    rooms.push(room);
   }
+
+  const saveRoomAsync = (room) => {
+    return new Promise((resolve, reject) => {
+      room.save((err) => {
+        if (err) reject(err);
+        else resolve();
+      });
+    });
+  };
+
+  const roomsOps = [];
+
+  rooms.forEach((room) => {
+    roomsOps.push(saveRoomAsync(room));
+  });
+
+  Promise.all(roomsOps).then(() => {
+    mongoose.disconnect(() => {
+      console.log('Database connection closed');
+    });
+  });
 };
 
 seedDb();
-
