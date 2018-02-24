@@ -9,6 +9,10 @@ app.use('/', (req, res, next) => {
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
+app.get('/:id', (req, res) => {
+  res.send('received get request from component');
+});
+
 app.listen(3000, () => {
   console.log('...listening to port 3000');
 });
