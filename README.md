@@ -1,13 +1,12 @@
 # Project Name
 
-> Project description
+> Photo Gallery Service
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Fossa-bnb/reservation-service
+  - https://github.com/Fossa-bnb/reviews
+  - https://github.com/Fossa-bnb/information
 
 ## Table of Contents
 

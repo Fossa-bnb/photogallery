@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/photos', { autoIndex: false });
+mongoose.connect('mongodb://localhost/photos');
 
 const db = mongoose.connection;
 
