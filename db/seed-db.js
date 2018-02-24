@@ -117,6 +117,15 @@ const seedDb = () => {
 
   const rooms = [];
 
+  const saveRoomAsync = (room) => {
+    return new Promise((resolve, reject) => {
+      room.save((err) => {
+        if (err) reject(err);
+        else resolve();
+      });
+    });
+  };
+
   for (let i = 1; i <= 100; i += 1) {
     const numPhotos = Math.floor(Math.random() * 10) + 2;
     const photosArray = [];
@@ -134,26 +143,12 @@ const seedDb = () => {
       roomId: i,
       photos: photosArray,
     });
-    rooms.push(room);
+    rooms.push(saveRoomAsync(room));
   }
 
-  const saveRoomAsync = (room) => {
-    return new Promise((resolve, reject) => {
-      room.save((err) => {
-        if (err) reject(err);
-        else resolve();
-      });
-    });
-  };
-
-  const roomsOps = [];
-
-  rooms.forEach((room) => {
-    roomsOps.push(saveRoomAsync(room));
-  });
-
-  Promise.all(roomsOps).then(() => {
+  Promise.all(rooms).then(() => {
     mongoose.disconnect(() => {
+      console.log('Seeded database');
       console.log('Database connection closed');
     });
   });
