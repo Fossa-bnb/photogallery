@@ -8,9 +8,9 @@ describe('Unit Test for <PhotoGallery /> Component', () => {
     expect(wrapper.find('div').hasClass('photo-gallery')).toEqual(true);
   });
   
-  it('should initially render with an empty array of photos', () => {
+  it('should initially render with an array of two empty photo objects', () => {
     const wrapper = shallow(<PhotoGallery />);
-    expect(wrapper.state().photos.length).toEqual(0);
+    expect(wrapper.state().photos.length).toEqual(2);
   });
 
 });

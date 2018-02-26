@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Banner = (props) => {
+const Banner = ({photo1URL, photo2URL}) => {
   return (
     <div className="banner">
-      <img src={props.photo1.url}/>
-      <img src={props.photo2.url}/>
+      <img src={photo1URL}/>
+      <img src={photo2URL}/>
     </div>
   )
 }; 

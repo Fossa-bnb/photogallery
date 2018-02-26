@@ -2,7 +2,6 @@ import React from 'react';
 import $ from 'jquery';
 import Banner from './Banner';
 
-
 class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +11,7 @@ class PhotoGallery extends React.Component {
   }
 
   componentDidMount() {
-    const id = 5;
+    const id = 80;
     $.ajax({
       url: `/${id}`,
       method: "GET",
@@ -33,7 +32,7 @@ class PhotoGallery extends React.Component {
     return (
       <div className="photo-gallery">
         Photo Gallery Module
-        <Banner photo1={this.state.photos[0]} photo2={this.state.photos[1]} />
+        <Banner photo1URL={this.state.photos[0].url} photo2URL={this.state.photos[1].url} />
       </div>
     )
   }

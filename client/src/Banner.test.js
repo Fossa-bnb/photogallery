@@ -9,9 +9,9 @@ describe('Unit test for <Banner /> Component', () => {
   });
 
   it('should have two photos in its props', () => {
-    const wrapper = shallow(<Banner photo1="firstPhoto" photo2="secondPhoto"/>);
-    expect(wrapper.prop('photo1')).toEqual('firstPhoto');
-    expect(wrapper.prop('photo2')).toEqual('secondPhoto');
+    const wrapper = shallow(<Banner photo1URL="http://lorempixel.com/400/600/animals/3/" photo2URL="http://lorempixel.com/400/600/nightlife/10/" />);
+    expect(wrapper.prop('photo1')).toEqual('http://lorempixel.com/400/600/animals/3/');
+    expect(wrapper.prop('photo2')).toEqual('http://lorempixel.com/400/600/nightlife/10/');
   });
 
 });
