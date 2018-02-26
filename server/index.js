@@ -11,19 +11,15 @@ app.use('/', (req, res, next) => {
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/:id', (req, res) => {
-  retrievePhotos(req.params.id, (err, result) => {
+  retrievePhotos(req.params.id, (err, photos) => {
     if (err) {
       console.log('there was an error');
     } else {
       console.log('speaking to db');
-      console.log('got back' + result); 
+      console.log('got back' + photos); 
+      res.send(photos);
     }
   });
-  // use the req.params.id to query the database for the info
-  // create a model function that finds the info from the database
-
-
-  res.send('received get request from component');
 });
 
 app.listen(3000, () => {

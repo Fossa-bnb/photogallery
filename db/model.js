@@ -8,9 +8,10 @@ const retrievePhotos = (id, callback) => {
     if (err) {
       callback(err, null);
     } else {
+      console.log('retrieve photos is getting called');
       callback(null, room);
     }
   });
-}
+};
 
 module.exports = retrievePhotos;
