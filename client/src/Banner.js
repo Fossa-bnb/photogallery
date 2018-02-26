@@ -9,6 +9,4 @@ const Banner = ({photo1URL, photo2URL}) => {
   )
 }; 
 
-
-
 export default Banner;
