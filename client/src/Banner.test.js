@@ -13,4 +13,9 @@ describe('Unit test for <Banner /> Component', () => {
     expect(wrapper.props().children[0].props.src).toEqual('http://lorempixel.com/400/600/animals/3/');
     expect(wrapper.props().children[1].props.src).toEqual('http://lorempixel.com/400/600/nightlife/10/');
   });
+
+  it('should render a "View Photos" Button', () => {
+    const wrapper = shallow(<Banner />);
+    expect(wrapper.find('button').text()).toEqual('View Photos');
+  });
 });
