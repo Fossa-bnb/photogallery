@@ -1,12 +1,13 @@
 import React from 'react';
 import $ from 'jquery';
+import Banner from './Banner';
 
 
 class PhotoGallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: [],
+      photos: [{id: 0, caption: '', url: ''}, {id: 0, caption: '', url: ''}],
     }
   }
 
@@ -32,6 +33,7 @@ class PhotoGallery extends React.Component {
     return (
       <div className="photo-gallery">
         Photo Gallery Module
+        <Banner photo1={this.state.photos[0]} photo2={this.state.photos[1]} />
       </div>
     )
   }
