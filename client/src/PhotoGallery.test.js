@@ -7,4 +7,10 @@ describe('Test for <PhotoGallery /> Component', () => {
     const wrapper = shallow(<PhotoGallery />);
     expect(wrapper.find('div').hasClass('photo-gallery')).toEqual(true);
   });
+  
+  it('should initially render with an empty array of photos', () => {
+    const wrapper = shallow(<PhotoGallery />);
+    expect(wrapper.state().photos.length).toEqual(0);
+  });
+
 });

@@ -11,8 +11,6 @@ class PhotoGallery extends React.Component {
   }
 
   componentDidMount() {
-    //initiate ajax request to the server with a particular id
-    //setup a route on the server to receive get request to endpoint /id
     const id = 5;
     $.ajax({
       url: `/${id}`,
