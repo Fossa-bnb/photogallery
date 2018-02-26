@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Test for <PhotoGallery /> Component should render a div with class "photo-gallery" 1`] = `
-<div
-  className="photo-gallery"
->
-  Photo Gallery Module
-</div>
-`;
