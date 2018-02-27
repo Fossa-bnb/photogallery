@@ -12,13 +12,12 @@ class PhotoGallery extends React.Component {
   }
 
   componentDidMount() {
-    const id = 80;
+    const id = 81;
     $.ajax({
       url: `/${id}`,
       method: "GET",
       success: ({photos}) => {
         console.log(`Successful GET request for photos of ${id}`);
-        console.log(`Got back these photos on the client: ${photos.length}`);
         this.setState({
           photos: photos
         });
