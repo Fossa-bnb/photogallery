@@ -29,14 +29,18 @@ class PhotoGallery extends React.Component {
   }
 
   toggleGalleryView() {
-    
+    console.log('clicked');
   }
 
   render() {
     return (
       <div className="photo-gallery">
         Photo Gallery Module
-        <Banner photo1URL={this.state.photos[0].url} photo2URL={this.state.photos[1].url} />
+        <Banner 
+          photo1URL={this.state.photos[0].url} 
+          photo2URL={this.state.photos[1].url} 
+          toggleGalleryView={this.toggleGalleryView.bind(this)} 
+        />
       </div>
     )
   }

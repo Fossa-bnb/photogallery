@@ -17,4 +17,9 @@ describe('Unit Test for <PhotoGallery /> Component', () => {
     const wrapper = shallow(<PhotoGallery />);
     expect(wrapper.instance().toggleGalleryView).toBeDefined();
   });
+
+  it('should have toggleGalleryView function that is invoked each time the user clicks "View Photos" button', () => {
+    const wrapper = shallow(<PhotoGallery />);
+    expect(wrapper.instance().toggleGalleryView).toHaveBeenCalled();
+  });
 });

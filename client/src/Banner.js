@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Banner = ({photo1URL, photo2URL}) => {
+const Banner = ({photo1URL, photo2URL, toggleGalleryView}) => {
   return (
     <div className="banner">
       <img src={photo1URL}/>
       <img src={photo2URL}/>
-      <button>View Photos</button>
+      <button onClick={toggleGalleryView}>View Photos</button>
     </div>
   )
 }; 
