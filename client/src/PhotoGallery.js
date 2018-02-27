@@ -7,6 +7,7 @@ class PhotoGallery extends React.Component {
     super(props);
     this.state = {
       photos: [{id: 0, caption: '', url: ''}, {id: 0, caption: '', url: ''}],
+      galleryView: false
     }
   }
 
@@ -29,7 +30,9 @@ class PhotoGallery extends React.Component {
   }
 
   toggleGalleryView() {
-    console.log('clicked');
+    this.setState({
+      galleryView: true
+    });
   }
 
   render() {
