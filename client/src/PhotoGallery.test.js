@@ -15,6 +15,6 @@ describe('Unit Test for <PhotoGallery /> Component', () => {
   
   it('should have a toggleGalleryView function', () => {
     const wrapper = shallow(<PhotoGallery />);
-    expect(wrapper.toggleGalleryView).toBeDefined();
+    expect(wrapper.instance().toggleGalleryView).toBeDefined();
   });
 });

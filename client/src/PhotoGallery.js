@@ -28,6 +28,10 @@ class PhotoGallery extends React.Component {
     })
   }
 
+  toggleGalleryView() {
+    
+  }
+
   render() {
     return (
       <div className="photo-gallery">
