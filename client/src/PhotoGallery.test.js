@@ -12,5 +12,9 @@ describe('Unit Test for <PhotoGallery /> Component', () => {
     const wrapper = shallow(<PhotoGallery />);
     expect(wrapper.state().photos.length).toEqual(2);
   });
-
+  
+  it('should have a toggleGalleryView function', () => {
+    const wrapper = shallow(<PhotoGallery />);
+    expect(wrapper.toggleGalleryView).toBeDefined();
+  });
 });
