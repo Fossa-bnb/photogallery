@@ -46,6 +46,7 @@ class Photos extends React.Component {
         />
         <Gallery 
           photos={this.state.photos}
+          galleryView={this.state.galleryView}
         />
       </div>
     )
