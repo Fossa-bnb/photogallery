@@ -31,7 +31,7 @@ class Photos extends React.Component {
 
   toggleGalleryView() {
     this.setState({
-      galleryView: true
+      galleryView: !this.state.galleryView
     });
   }
 
@@ -47,6 +47,7 @@ class Photos extends React.Component {
         <Gallery 
           photos={this.state.photos}
           galleryView={this.state.galleryView}
+          toggleGalleryView={this.toggleGalleryView.bind(this)}
         />
       </div>
     )

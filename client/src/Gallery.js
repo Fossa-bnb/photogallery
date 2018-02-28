@@ -8,10 +8,6 @@ class Gallery extends React.Component {
     }
   }
 
-  closeModal() {
-    console.log('closeModal called');
-  }
-
   plusSlides(moveBy) {
     console.log('plus slides invoked');
   }
@@ -22,7 +18,7 @@ class Gallery extends React.Component {
         <div className="gallery">
           This is a Gallery View 
           <div id="myModal" className="modal">
-            <span className="close cursor" onClick={this.closeModal.bind(this)}>&times;</span>
+            <span className="close cursor" onClick={this.props.toggleGalleryView}>&times;</span>
             <div className="modal-content">
   
               <div className="mySlides">
