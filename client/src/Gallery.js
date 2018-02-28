@@ -13,11 +13,11 @@ class Gallery extends React.Component {
   }
   
   plusSlides(n) {
-    // call showSlides(slideIndex += n)
+    this.showSlides(this.state.slideIndex += n)
   }
 
   currentSlide(n) {
-    //call showSlides(default slideIndex to n)
+    this.showSlides(this.state.slideIndex = n)
   }
 
   showSlides(n) {
@@ -45,6 +45,10 @@ class Gallery extends React.Component {
       dots[slideIndex - 1].className += " active";
       captionText.innerHTML = dots[slideIndex - 1].alt;
     }
+
+    this.setState({
+      slideIndex: n
+    })
 
   }
   
