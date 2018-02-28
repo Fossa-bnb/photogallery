@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import Banner from './Banner';
 
-class PhotoGallery extends React.Component {
+class Photos extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,8 +36,8 @@ class PhotoGallery extends React.Component {
 
   render() {
     return (
-      <div className="photo-gallery">
-        Photo Gallery Module
+      <div className="photos-module">
+        Photos Module
         <Banner 
           photo1URL={this.state.photos[0].url} 
           photo2URL={this.state.photos[1].url} 
@@ -48,4 +48,4 @@ class PhotoGallery extends React.Component {
   }
 }
 
-export default PhotoGallery;
+export default Photos;

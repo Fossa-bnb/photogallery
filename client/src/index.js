@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PhotoGallery from './PhotoGallery';
+import Photos from './Photos';
 
 ReactDOM.render(
-  <PhotoGallery />,
+  <Photos />,
   document.getElementById('app')
 );
