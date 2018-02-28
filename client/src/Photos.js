@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Banner from './Banner';
+import Gallery from './Gallery';
 
 class Photos extends React.Component {
   constructor(props) {
@@ -42,6 +43,9 @@ class Photos extends React.Component {
           photo1URL={this.state.photos[0].url} 
           photo2URL={this.state.photos[1].url} 
           toggleGalleryView={this.toggleGalleryView.bind(this)} 
+        />
+        <Gallery 
+          photos={this.state.photos}
         />
       </div>
     )
