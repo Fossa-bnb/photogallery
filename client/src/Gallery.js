@@ -88,19 +88,19 @@ class Gallery extends React.Component {
 
             <div className="thumbnails">
               <div className="column">
-                <img className="demo" src={this.props.photos[0].url} onClick={this.currentSlide.bind(this, 1)} alt="Nature"/>
+                <img className="demo" src={this.props.photos[0].url} onClick={this.currentSlide.bind(this, 1)} alt={this.props.photos[0].caption}/>
               </div>
 
               <div className="column">
-                <img className="demo" src={this.props.photos[1].url} onClick={this.currentSlide.bind(this, 2)} alt="Nature"/>
+                <img className="demo" src={this.props.photos[1].url} onClick={this.currentSlide.bind(this, 2)} alt={this.props.photos[1].caption}/>
               </div>
 
               <div className="column">
-                <img className="demo" src={this.props.photos[2].url} onClick={this.currentSlide.bind(this, 3)} alt="Nature"/>
+                <img className="demo" src={this.props.photos[2].url} onClick={this.currentSlide.bind(this, 3)} alt={this.props.photos[2].caption}/>
               </div>
 
               <div className="column">
-                <img className="demo" src={this.props.photos[3].url} onClick={this.currentSlide.bind(this, 4)} alt="Nature"/>
+                <img className="demo" src={this.props.photos[3].url} onClick={this.currentSlide.bind(this, 4)} alt={this.props.photos[3].caption}/>
               </div>
             </div>
 
