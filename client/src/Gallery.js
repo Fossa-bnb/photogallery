@@ -83,8 +83,22 @@ class Gallery extends React.Component {
               <div className="caption-container">
                 <p id="caption"></p>
               </div>
+
+              <div className="column">
+                <img className="demo" src={this.props.photos[0].url} onClick={this.currentSlide.bind(this, 1)} alt="Nature"/>
+              </div>
   
-  
+              <div className="column">
+                <img className="demo" src={this.props.photos[1].url} onClick={this.currentSlide.bind(this, 2)} alt="Nature"/>
+              </div>
+
+              <div className="column">
+                <img className="demo" src={this.props.photos[2].url} onClick={this.currentSlide.bind(this, 3)} alt="Nature"/>
+              </div>
+
+              <div className="column">
+                <img className="demo" src={this.props.photos[3].url} onClick={this.currentSlide.bind(this, 4)} alt="Nature"/>
+              </div>
   
             </div>
           </div>
