@@ -7,4 +7,6 @@ describe ('Unit test for <Gallery /> Component', () => {
     const wrapper = shallow(<Gallery />);
     expect(wrapper.find('div').hasClass('gallery')).toEqual(true);
   });
+
+  // it should conditionally render based on click
 });

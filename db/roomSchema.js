@@ -7,7 +7,6 @@ const roomSchema = new Schema({
   photos: [{ photoId: Number, url: String, caption: String }],
 });
 
-
 const Room = mongoose.model('Room', roomSchema);
 
 module.exports = Room;
