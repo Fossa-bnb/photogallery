@@ -1,0 +1,28 @@
+import React from 'react';
+import Photos from './Photos';
+import { shallow } from 'enzyme';
+
+describe('Unit Test for <Photos /> Component', () => {
+  it('should render a div with class "photos-module"', () => {
+    const wrapper = shallow(<Photos />);
+    expect(wrapper.find('div').hasClass('photos-module')).toEqual(true);
+  });
+  
+  it('should initially render with an array of two empty photo objects', () => {
+    const wrapper = shallow(<Photos />);
+    expect(wrapper.state().photos.length).toEqual(2);
+  });
+  
+  it('should have a toggleGalleryView function', () => {
+    const wrapper = shallow(<Photos />);
+    expect(wrapper.instance().toggleGalleryView).toBeDefined();
+  });
+  
+  // Need to learn how to test function that depends on child component button click
+  // it('should have toggleGalleryView function that is invoked each time the user clicks "View Photos" button', () => {
+  //   const wrapper = shallow(<Photos />);
+  //   // assign a mock function to the toggleGalleryView
+  //   // simulate the click
+  //   expect(wrapper.instance().toggleGalleryView).toHaveBeenCalled();
+  // });
+});

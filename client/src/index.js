@@ -1,11 +1,8 @@
-//console.log('My minimal React Webpack Babel Setup');
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const title = 'My Minimal React Webpack Babel Setup';
+import Photos from './Photos';
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <Photos />,
   document.getElementById('app')
 );
