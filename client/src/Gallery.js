@@ -6,16 +6,30 @@ class Gallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: 1
+      slideIndex: 2
     }
+  }
+
+  plusSlides() {
+    console.log('plus sides');
   }
 
   render() {
     return (
       <div className="gallery">
-        <Spotlight photo={this.props.photos[0]} />
+        <span className="close" onClick={this.props.toggleGalleryView}>&#x2715;</span>
+        <div className="spotlight-container">
+          <div className="prev" onClick={this.plusSlides.bind(this, -1)}>
+            <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
+          </div>
+          <Spotlight photo={this.props.photos[this.state.slideIndex]} />
+          <div className="next" onClick={this.plusSlides.bind(this, 1)}>
+            <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
+          </div>
+        </div>
         <ThumbnailList photos={this.props.photos}/>
-      </div>
+
+        </div>
     )
   }
 }

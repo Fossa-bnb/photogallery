@@ -3,8 +3,7 @@ import React from 'react';
 const Spotlight = (props) => {
   return (
     <div className="spotlight">
-      Spotlight
-      <img src={props.photo.url}/>
+      <img className="spotlight-img" src={props.photo.url}/>
     </div>
   )
 }
