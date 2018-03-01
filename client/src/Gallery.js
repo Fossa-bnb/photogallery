@@ -25,7 +25,6 @@ class Gallery extends React.Component {
   }
 
   showSlides(n) {
-    console.log(n);
     let i;
     let slideIndex = n
     let slides = this.props.photos;
