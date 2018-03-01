@@ -8,4 +8,9 @@ describe('Unit Test for <Spotlight /> Component', () => {
     const wrapper = shallow(<Spotlight photo={testPhoto} />);
     expect(wrapper.find('div').first().hasClass('spotlight')).toEqual(true);
   });
+
+  it('should receive a numPhotos prop', () => {
+    const component = (<Spotlight numPhotos={13} />);
+    expect(component.props.numPhotos).toEqual(13);
+  });
 });
