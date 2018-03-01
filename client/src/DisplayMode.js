@@ -1,13 +1,13 @@
 import React from 'react';
 import Gallery from './Gallery';
 
-const DisplayMode = (props) => {
-  if (props.galleryView) {
+const DisplayMode = ({galleryView, toggleGalleryView, photos}) => {
+  if (galleryView) {
     return (
       <div className="display-mode">
         <Gallery 
-          photos={props.photos}
-          toggleGalleryView={props.toggleGalleryView}
+          photos={photos}
+          toggleGalleryView={toggleGalleryView}
         />
       </div>
     )

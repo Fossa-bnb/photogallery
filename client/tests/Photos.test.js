@@ -17,12 +17,4 @@ describe('Unit Test for <Photos /> Component', () => {
     const wrapper = shallow(<Photos />);
     expect(wrapper.instance().toggleGalleryView).toBeDefined();
   });
-  
-  // Need to learn how to test function that depends on child component button click
-  // it('should have toggleGalleryView function that is invoked each time the user clicks "View Photos" button', () => {
-  //   const wrapper = shallow(<Photos />);
-  //   // assign a mock function to the toggleGalleryView
-  //   // simulate the click
-  //   expect(wrapper.instance().toggleGalleryView).toHaveBeenCalled();
-  // });
 });
