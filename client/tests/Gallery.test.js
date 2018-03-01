@@ -1,5 +1,5 @@
 import React from 'react';
-import Gallery from './Gallery';
+import Gallery from '../src/Gallery';
 import { shallow } from 'enzyme';
 
 describe ('Unit test for <Gallery /> Component', () => {

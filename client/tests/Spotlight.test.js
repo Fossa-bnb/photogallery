@@ -1,5 +1,5 @@
 import React from 'react';
-import Spotlight from './Spotlight';
+import Spotlight from '../src/Spotlight';
 import { shallow } from 'enzyme';
 
 describe('Unit Test for <Spotlight /> Component', () => {

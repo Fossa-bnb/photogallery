@@ -1,5 +1,5 @@
 import React from 'react';
-import Thumbnail from './Thumbnail';
+import Thumbnail from '../src/Thumbnail';
 import { shallow } from 'enzyme';
 
 describe('Unit Test for <Thumbnail /> Component', () => {

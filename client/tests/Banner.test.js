@@ -1,5 +1,5 @@
 import React from 'react';
-import Banner from './Banner';
+import Banner from '../src/Banner';
 import { shallow } from 'enzyme';
 
 describe('Unit test for <Banner /> Component', () => {

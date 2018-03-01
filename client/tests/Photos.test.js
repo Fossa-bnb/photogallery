@@ -1,5 +1,5 @@
 import React from 'react';
-import Photos from './Photos';
+import Photos from '../src/Photos';
 import { shallow } from 'enzyme';
 
 describe('Unit Test for <Photos /> Component', () => {

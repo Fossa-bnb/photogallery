@@ -1,5 +1,5 @@
 import React from 'react';
-import DisplayMode from './DisplayMode';
+import DisplayMode from '../src/DisplayMode';
 import { shallow } from 'enzyme';
 
 describe('Unit Test for <DisplayMode /> Component', () => {
