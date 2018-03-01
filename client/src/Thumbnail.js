@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Thumbnail = (props) => {
+const Thumbnail = ({photoId, url, currentSlide}) => {
   return (
     <div className="thumbnail">
-      <img className="thumbnail-img" onClick={() => {props.currentSlide(props.index)}} src={props.photo.url} />
+      <img className="thumbnail-img" onClick={() => {currentSlide(photoId - 1)}} src={url} />
     </div>
   )
 }

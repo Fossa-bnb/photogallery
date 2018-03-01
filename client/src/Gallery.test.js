@@ -8,6 +8,15 @@ describe ('Unit test for <Gallery /> Component', () => {
     const wrapper = shallow(<Gallery photos={testPhotos} />);
     expect(wrapper.find('div').first().hasClass('gallery')).toEqual(true);
   });
-
-  // it should conditionally render based on click
 });
+
+// Component Contract Definition for Testing
+// What it renders
+// Props component receives
+// State component holds (if any)
+// Component response to user interaction
+
+// Others:
+// Context the component is rendered in
+// What component does when you call methods on its instance
+// Side effects that occur as part of the component lifecicyle

@@ -8,4 +8,20 @@ describe('Unit Test for <Thumbnail /> Component', () => {
     const wrapper = shallow(<Thumbnail photo={testPhoto}/>);
     expect(wrapper.find('div').hasClass('thumbnail')).toEqual(true);
   });
+
+  it('should receive a url prop with correct url path', () => {
+    const wrapper = shallow(<Thumbnail url={'testUrl'} />);
+    expect(wrapper.props().children.props.src).toEqual('testUrl');
+  });
+
+  it('should receive a photoId prop with correct id', () => {
+    const component = (<Thumbnail photoId={15} />);
+    expect(component.props.photoId).toEqual(15);
+  });
 });
+
+// Component Contract Definition for Testing
+// What it renders 
+// Props component receives
+// State component holds (if any)
+// Component response to user interaction
