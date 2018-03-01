@@ -19,9 +19,3 @@ describe('Unit Test for <Thumbnail /> Component', () => {
     expect(component.props.photoId).toEqual(15);
   });
 });
-
-// Component Contract Definition for Testing
-// What it renders 
-// Props component receives
-// State component holds (if any)
-// Component response to user interaction
