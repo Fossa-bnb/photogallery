@@ -8,6 +8,7 @@ class Photos extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      // default state
       photos: [{id: 0, caption: '', url: ''}, {id: 0, caption: '', url: ''}],
       galleryView: false
     }

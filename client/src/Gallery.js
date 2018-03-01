@@ -13,11 +13,13 @@ class Gallery extends React.Component {
   componentDidMount() {
     this.showSlides(this.state.slideIndex);
   }
-
+  
+  // increment spotlight slide using arrow
   plusSlides(n) {
     this.showSlides(this.state.slideIndex += n)
   }
 
+  // make current spotlight slide using thumbnail click
   currentSlide(n) {
     this.showSlides(this.state.slideIndex = n)
   }
