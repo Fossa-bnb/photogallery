@@ -14,7 +14,6 @@ const DisplayMode = (props) => {
   }
   return (
     <div>
-      Not Gallery View
     </div>
   )
 

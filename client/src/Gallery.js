@@ -54,7 +54,6 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className="gallery">
-        This is a Gallery View 
         <div id="myModal" className="modal">
           <span className="close cursor" onClick={this.props.toggleGalleryView}>&times;</span>
           <div className="modal-content">
@@ -78,13 +77,13 @@ class Gallery extends React.Component {
               <div className="numbertext">4 / 4</div>
               <img src={this.props.photos[3].url} style={{ width: '100%'}}/>
             </div>
-
-            <a className="prev" onClick={this.plusSlides.bind(this, -1)}>
+            
+            <div className="prev" onClick={this.plusSlides.bind(this, -1)}>
               <img src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
-            </a>
-            <a className="next" onClick={this.plusSlides.bind(this, 1)}>
+            </div>
+            <div className="next" onClick={this.plusSlides.bind(this, 1)}>
               <img src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
-            </a>
+            </div>
 
             <div className="caption-container">
               <p id="caption"></p>
