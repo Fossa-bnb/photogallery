@@ -2,7 +2,8 @@ import React from 'react';
 
 const Thumbnail = (props) => {
   return (
-    <div class="thumbnail">
+    <div className="thumbnail">
+      <img src={props.photo.url} />
     </div>
   )
 }

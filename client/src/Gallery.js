@@ -1,5 +1,6 @@
 import React from 'react';
 import Spotlight from './Spotlight';
+import ThumbnailList from './ThumbnailList';
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -12,8 +13,8 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className="gallery">
-        Spotlight
         <Spotlight photo={this.props.photos[0]} />
+        <ThumbnailList photos={this.props.photos}/>
       </div>
     )
   }
