@@ -10,8 +10,49 @@ class Gallery extends React.Component {
     }
   }
 
-  plusSlides() {
-    console.log('plus sides');
+  componentDidMount() {
+    console.log("mount function works");
+    this.showSlides(this.state.slideIndex);
+  }
+
+  plusSlides(n) {
+    this.showSlides(this.state.slideIndex += n)
+  }
+
+  currentSlide(n) {
+    console.log("current works");
+    this.showSlides(this.state.slideIndex = n)
+  }
+
+  showSlides(n) {
+    let i;
+    let slideIndex = n
+    let slides = this.props.photos;
+    let thumbnails = this.props.photos;
+
+    if (n > slides.length) {
+      n = 1;
+    }
+    if (n < 1) {
+      n = slides.length;
+    }
+    // for (i = 0; i < slides.length; i++) {
+    //   slides[i].style.display = 'none';
+    // }
+    // for (i = 0; i < dots.length; i++) {
+    //   dots[i].className = dots[i].className.replace(" active", "");
+    // }
+    // if (slides.length > 0) {
+    //   slides[slideIndex - 1].style.display = 'block';
+    // }
+    // if (dots.length > 0) {
+    //   dots[slideIndex - 1].className += " active";
+    //   captionText.innerHTML = dots[slideIndex - 1].alt;
+    // }
+
+    this.setState({
+      slideIndex: n % this.props.photos.length
+    })
   }
 
   render() {
