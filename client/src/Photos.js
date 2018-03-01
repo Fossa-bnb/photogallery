@@ -39,7 +39,6 @@ class Photos extends React.Component {
   render() {
     return (
       <div className="photos-module">
-        Photos Module
         <Banner 
           photo1URL={this.state.photos[0].url} 
           photo2URL={this.state.photos[1].url} 

@@ -5,7 +5,7 @@ const ThumbnailList = (props) => {
   return (
     <div className="thumbnail-list">
       {props.photos.map((photo, index) => {
-        return <Thumbnail key={index} photo={photo} />
+        return <Thumbnail key={index} index={index} photo={photo} currentSlide={props.currentSlide} />
       })}
     </div>
   )

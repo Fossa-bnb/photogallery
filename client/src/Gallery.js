@@ -11,7 +11,6 @@ class Gallery extends React.Component {
   }
 
   componentDidMount() {
-    console.log("mount function works");
     this.showSlides(this.state.slideIndex);
   }
 
@@ -20,7 +19,7 @@ class Gallery extends React.Component {
   }
 
   currentSlide(n) {
-    console.log("current works");
+    console.log('currentslide', n);
     this.showSlides(this.state.slideIndex = n)
   }
 
@@ -59,18 +58,23 @@ class Gallery extends React.Component {
     return (
       <div className="gallery">
         <span className="close" onClick={this.props.toggleGalleryView}>&#x2715;</span>
+        
         <div className="spotlight-container">
+          
           <div className="prev" onClick={this.plusSlides.bind(this, -1)}>
             <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
           </div>
+
           <Spotlight photo={this.props.photos[this.state.slideIndex]} />
+
           <div className="next" onClick={this.plusSlides.bind(this, 1)}>
             <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
           </div>
-        </div>
-        <ThumbnailList photos={this.props.photos}/>
 
         </div>
+        <ThumbnailList photos={this.props.photos} currentSlide={this.currentSlide.bind(this)}/>
+
+      </div>
     )
   }
 }
