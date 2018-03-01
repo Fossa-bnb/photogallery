@@ -4,7 +4,7 @@ import Gallery from './Gallery';
 const DisplayMode = (props) => {
   if (props.galleryView) {
     return (
-      <div>
+      <div className="display-mode">
         <Gallery 
           photos={props.photos}
           toggleGalleryView={props.toggleGalleryView}
@@ -13,7 +13,7 @@ const DisplayMode = (props) => {
     )
   }
   return (
-    <div>
+    <div className="display-mode">
     </div>
   )
 }
