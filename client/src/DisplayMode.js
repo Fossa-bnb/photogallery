@@ -16,7 +16,6 @@ const DisplayMode = (props) => {
     <div>
     </div>
   )
-
 }
 
 export default DisplayMode;

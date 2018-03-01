@@ -127,7 +127,7 @@ const seedDb = () => {
   };
 
   for (let i = 1; i <= 100; i += 1) {
-    const numPhotos = Math.floor(Math.random() * 10) + 2;
+    const numPhotos = Math.floor(Math.random() * 10) + 5;
     const photosArray = [];
 
     for (let j = 1; j <= numPhotos; j += 1) {

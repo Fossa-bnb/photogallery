@@ -6,7 +6,7 @@ class Gallery extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: 2
+      slideIndex: 0
     }
   }
 
@@ -19,7 +19,6 @@ class Gallery extends React.Component {
   }
 
   currentSlide(n) {
-    console.log('currentslide', n);
     this.showSlides(this.state.slideIndex = n)
   }
 
@@ -35,19 +34,7 @@ class Gallery extends React.Component {
     if (n < 1) {
       n = slides.length;
     }
-    // for (i = 0; i < slides.length; i++) {
-    //   slides[i].style.display = 'none';
-    // }
-    // for (i = 0; i < dots.length; i++) {
-    //   dots[i].className = dots[i].className.replace(" active", "");
-    // }
-    // if (slides.length > 0) {
-    //   slides[slideIndex - 1].style.display = 'block';
-    // }
-    // if (dots.length > 0) {
-    //   dots[slideIndex - 1].className += " active";
-    //   captionText.innerHTML = dots[slideIndex - 1].alt;
-    // }
+
 
     this.setState({
       slideIndex: n % this.props.photos.length
@@ -65,7 +52,7 @@ class Gallery extends React.Component {
             <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
           </div>
 
-          <Spotlight photo={this.props.photos[this.state.slideIndex]} />
+          <Spotlight photo={this.props.photos[this.state.slideIndex]} numPhotos={this.props.photos.length}/>
 
           <div className="next" onClick={this.plusSlides.bind(this, 1)}>
             <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
