@@ -79,8 +79,12 @@ class Gallery extends React.Component {
               <img src={this.props.photos[3].url} style={{ width: '100%'}}/>
             </div>
 
-            <a className="prev" onClick={this.plusSlides.bind(this, -1)}>&#10094;</a>
-            <a className="next" onClick={this.plusSlides.bind(this, 1)}>&#10095;</a>
+            <a className="prev" onClick={this.plusSlides.bind(this, -1)}>
+              <img src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
+            </a>
+            <a className="next" onClick={this.plusSlides.bind(this, 1)}>
+              <img src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
+            </a>
 
             <div className="caption-container">
               <p id="caption"></p>
