@@ -54,7 +54,7 @@ class Gallery extends React.Component {
             <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
           </div>
 
-          <Spotlight photo={this.props.photos[this.state.slideIndex]} numPhotos={this.props.photos.length}/>
+          <Spotlight plusSlides={this.plusSlides.bind(this, 1)} photo={this.props.photos[this.state.slideIndex]} numPhotos={this.props.photos.length}/>
 
           <div className="next" onClick={this.plusSlides.bind(this, 1)}>
             <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
