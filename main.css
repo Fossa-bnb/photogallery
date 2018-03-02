@@ -16,6 +16,7 @@
 
 .banner:hover {
   margin-left: -2em;
+  cursor: pointer;
 }
 
 .banner-background {
@@ -113,6 +114,7 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .thumbnail-img {
@@ -137,6 +139,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .spotlight-img {
