@@ -8,7 +8,7 @@ app.use('/', (req, res, next) => {
   next();
 });
 
-app.use(express.static(path.resolve(__dirname, '../dist')));
+app.use(express.static(path.resolve(__dirname, '../')));
 
 app.get('/:id', (req, res) => {
   retrievePhotos(req.params.id, (err, photos) => {
