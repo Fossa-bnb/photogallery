@@ -58,8 +58,7 @@ class Gallery extends React.Component {
     if (n < 0) {
       n = slides.length - 1;
     }
-
-
+    
     this.setState({
       slideIndex: n % this.props.photos.length
     })
