@@ -37,6 +37,3 @@ describe ('Unit test for <Gallery /> Component', () => {
     expect(wrapper.state().showThumbnails).toEqual(true);
   })
 });
-
-// Gallery contract:
-// should have state slideIndex default of 0, and showThumbnails default of false
