@@ -13,10 +13,8 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
 app.get('/:id', (req, res) => {
   retrievePhotos(req.params.id, (err, photos) => {
     if (err) {
-      console.log('there was an error');
+      console.log('Error retrieving photos');
     } else {
-      console.log('speaking to db');
-      console.log('got back' + photos); 
       res.send(photos);
     }
   });
