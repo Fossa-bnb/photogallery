@@ -26,19 +26,24 @@ class Gallery extends React.Component {
     this.showSlides(this.state.slideIndex = n)
   }
 
-  toggleThumbnails() {
+  toggleThumbnailsOn() {
 
     this.setState({
-      showThumbnails: !this.state.showThumbnails
+      showThumbnails: true
     })
 
-    if (this.state.showThumbnails) {
-      $('.shown-thumbnails').css({'display':'none'});
-      $('.hidden-thumbnails').css({'display': 'block'});
-    } else {
-      $('.shown-thumbnails').css({'display':'block'});
-      $('.hidden-thumbnails').css({'display': 'none'});
-    }
+    $('.shown-thumbnails').css({'display':'block'});
+    $('.hidden-thumbnails').css({'display': 'none'});
+  }
+
+  toggleThumbnailsOff() {
+    this.setState({
+      showThumbnails: false
+    })
+
+    $('.shown-thumbnails').css({'display':'none'});
+    $('.hidden-thumbnails').css({'display': 'block'});
+
   }
 
   showSlides(n) {
@@ -71,14 +76,24 @@ class Gallery extends React.Component {
             <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
           </div>
 
-          <Spotlight plusSlides={this.plusSlides.bind(this, 1)} photo={this.props.photos[this.state.slideIndex]} numPhotos={this.props.photos.length} toggleThumbnails={this.toggleThumbnails.bind(this)} />
+          <Spotlight 
+            plusSlides={this.plusSlides.bind(this, 1)} 
+            photo={this.props.photos[this.state.slideIndex]} 
+            numPhotos={this.props.photos.length} 
+            toggleThumbnailsOn={this.toggleThumbnailsOn.bind(this)}
+            toggleThumbnailsOff={this.toggleThumbnailsOff.bind(this)}
+          />
 
           <div className="next" onClick={this.plusSlides.bind(this, 1)}>
             <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
           </div>
 
         </div>
-        <ThumbnailList photos={this.props.photos} currentSlide={this.currentSlide.bind(this)} toggleThumbnails={this.toggleThumbnails.bind(this)} showThumbnails={this.state.showThumbnails} />
+        <ThumbnailList 
+          photos={this.props.photos} 
+          currentSlide={this.currentSlide.bind(this)} 
+          showThumbnails={this.state.showThumbnails} 
+        />
 
       </div>
     )

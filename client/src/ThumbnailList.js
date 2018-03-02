@@ -1,7 +1,7 @@
 import React from 'react';
 import Thumbnail from './Thumbnail';
 
-const ThumbnailList = ({photos, currentSlide, showThumbnails, toggleThumbnails}) => {
+const ThumbnailList = ({photos, currentSlide, showThumbnails}) => {
   if (showThumbnails) {
     return (
       <div className="thumbnail-list">
