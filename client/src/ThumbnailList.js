@@ -12,7 +12,7 @@ const ThumbnailList = ({photos, currentSlide, showThumbnails}) => {
     )
   } else {
     return (
-      <div>
+      <div className="thumbnail-list">
       </div>
     )
   }
