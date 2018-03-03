@@ -17,7 +17,7 @@ class Gallery extends React.Component {
   }
   
   // increment spotlight slide using arrow
-  plusSlides(n) {
+  shiftSlide(n) {
     this.showSlides(this.state.slideIndex += n)
   }
 
@@ -71,19 +71,19 @@ class Gallery extends React.Component {
         
         <div className="spotlight-container">
           
-          <div className="prev" onClick={this.plusSlides.bind(this, -1)}>
+          <div className="prev" onClick={this.shiftSlide.bind(this, -1)}>
             <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
           </div>
 
           <Spotlight 
-            plusSlides={this.plusSlides.bind(this, 1)} 
+            shiftSlide={this.shiftSlide.bind(this, 1)} 
             photo={this.props.photos[this.state.slideIndex]} 
             numPhotos={this.props.photos.length} 
             toggleThumbnailsOn={this.toggleThumbnailsOn.bind(this)}
             toggleThumbnailsOff={this.toggleThumbnailsOff.bind(this)}
           />
 
-          <div className="next" onClick={this.plusSlides.bind(this, 1)}>
+          <div className="next" onClick={this.shiftSlide.bind(this, 1)}>
             <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
           </div>
 
