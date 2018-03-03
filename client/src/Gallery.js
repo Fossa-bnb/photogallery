@@ -22,7 +22,7 @@ class Gallery extends React.Component {
   }
 
   // make current spotlight slide using thumbnail click
-  currentSlide(n) {
+  makeCurrentSlide(n) {
     this.showSlides(this.state.slideIndex = n)
   }
 
@@ -90,7 +90,7 @@ class Gallery extends React.Component {
         </div>
         <ThumbnailList 
           photos={this.props.photos} 
-          currentSlide={this.currentSlide.bind(this)} 
+          makeCurrentSlide={this.makeCurrentSlide.bind(this)} 
           showThumbnails={this.state.showThumbnails} 
         />
 
