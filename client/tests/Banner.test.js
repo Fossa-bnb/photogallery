@@ -3,7 +3,7 @@ import Banner from '../src/Banner';
 import { shallow } from 'enzyme';
 
 describe('Unit test for <Banner /> Component', () => {
-  it('should render a banner with classname "banner"', () => {
+  it('should render a banner with class name "banner"', () => {
     const wrapper = shallow(<Banner />);
     expect(wrapper.find('div').hasClass('banner')).toEqual(true);
   });
