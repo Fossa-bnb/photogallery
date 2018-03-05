@@ -17,4 +17,10 @@ describe('Unit Test for <Photos /> Component', () => {
     const wrapper = shallow(<Photos />);
     expect(wrapper.instance().toggleGalleryView).toBeDefined();
   });
+
+  it('should change galleryView state to true when toggleGalleryView is invoked', () => {
+    const wrapper = shallow(<Photos />);
+    wrapper.instance().toggleGalleryView();
+    expect(wrapper.state().galleryView).toEqual(true);
+  });
 });
