@@ -25,5 +25,6 @@ describe('Unit test for <Banner /> Component', () => {
     const wrapper = shallow(<Banner toggleGalleryView={toggleGalleryView}/>);
     wrapper.find('.banner').simulate('click');
     expect(toggleGalleryView.calledOnce).toEqual(true);
-  })
+  });
+
 });
