@@ -1,6 +1,7 @@
 import React from 'react';
 import Photos from '../src/Photos';
 import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Unit Test for <Photos /> Component', () => {
   it('should render a div with class "photos-module"', () => {
