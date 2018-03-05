@@ -23,7 +23,8 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "verbose": true
+    "verbose": true,
+    "collectCoverage": true
   },
   "babel": {
     "presets": [
