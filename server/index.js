@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const retrievePhotos = require('../db/model.js');
+const cors = require('cors');
+
+app.use(cors());
 
 app.use('/', (req, res, next) => {
   console.log(`${req.method} received from ${req.url}`);

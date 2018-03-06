@@ -16,7 +16,7 @@ class Photos extends React.Component {
   componentDidMount() {
     const id = this.props.myId;
     $.ajax({
-      url: `/${id}`,
+      url: `http://localhost:3000/${id}`,
       method: "GET",
       success: ({photos}) => {
         console.log(`Successful GET request for photos of ${id}`);
@@ -55,3 +55,4 @@ class Photos extends React.Component {
 }
 
 export default Photos;
+// window.Photos = Photos;
