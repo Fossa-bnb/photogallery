@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import Photos from './Photos';
 
 ReactDOM.render(
-  <Photos />,
+  <Photos myId={2} />,
   document.getElementById('app')
 );

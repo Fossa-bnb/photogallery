@@ -14,7 +14,7 @@ class Photos extends React.Component {
   }
 
   componentDidMount() {
-    const id = 2;
+    const id = this.props.myId;
     $.ajax({
       url: `/${id}`,
       method: "GET",
