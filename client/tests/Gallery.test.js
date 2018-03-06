@@ -29,12 +29,13 @@ describe ('Unit test for <Gallery /> Component', () => {
     const wrapper = mount(<Gallery photos={testPhotos} />);
     wrapper.find(Spotlight).find('.spotlight-img').simulate('click');
     expect(wrapper.state().slideIndex).toEqual(1);
-  })
+  });
 
   it('should change state of showThumbnails to true on mouseEnter of toggle-thumbnails div', () => {
     const testPhotos = [{photoId: 2, url: 'testUrl', caption: 'testCaption'}, {photoId: 3, url: 'testUrl2', caption: 'testCaption2'}];
     const wrapper = mount(<Gallery photos={testPhotos} />);
     wrapper.find(Spotlight).find('.toggle-thumbnails').simulate('mouseEnter');
     expect(wrapper.state().showThumbnails).toEqual(true);
-  })
+  });
+
 });

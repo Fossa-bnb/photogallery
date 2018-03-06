@@ -38,5 +38,4 @@ describe('Unit Test for <Spotlight /> Component', () => {
     wrapper.find('.shown-thumbnails').simulate('click');
     expect(toggleThumbnailsOff.calledOnce).toEqual(true);
   });
-
 });
