@@ -1,7 +1,6 @@
 import React from 'react';
 import Thumbnail from '../src/Thumbnail';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 
 describe('Unit Test for <Thumbnail /> Component', () => {
   it('should render a div with class name "thumbnail"', () => {
@@ -21,10 +20,10 @@ describe('Unit Test for <Thumbnail /> Component', () => {
   });
 
   it('should call makeCurrentSlide on click of thumbnail', () => {
-    const makeCurrentSlide = sinon.spy();
+    const makeCurrentSlide = jest.fn();
     const wrapper = shallow(<Thumbnail makeCurrentSlide={makeCurrentSlide} />);
     wrapper.find('.thumbnail-img').simulate('click');
-    expect(makeCurrentSlide.calledOnce).toEqual(true);
+    expect(makeCurrentSlide.mock.calls.length).toEqual(1);
   });
 
 });

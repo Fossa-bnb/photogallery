@@ -1,7 +1,6 @@
 import React from 'react';
 import Spotlight from '../src/Spotlight';
 import { shallow } from 'enzyme';
-import sinon from "sinon";
 
 describe('Unit Test for <Spotlight /> Component', () => {
   it('should render a div with class name "spotlight"', () => {
@@ -17,25 +16,25 @@ describe('Unit Test for <Spotlight /> Component', () => {
   
   it('should invoke shiftSlide on user click of spotlight image', () => {
     const testPhoto = {photoId: 2, url: 'testUrl', caption: 'testCaption'};
-    const shiftSlide = sinon.spy();
+    const shiftSlide = jest.fn();
     const wrapper = shallow(<Spotlight photo={testPhoto} shiftSlide={shiftSlide} />); 
     wrapper.find('.spotlight-img').simulate('click');
-    expect(shiftSlide.calledOnce).toEqual(true);
+    expect(shiftSlide.mock.calls.length).toEqual(1);
   });
 
   it('should invoke toggleThumbnailsOn on user hover over "show photos list"', () => {
     const testPhoto = {photoId: 2, url: 'testUrl', caption: 'testCaption'};
-    const toggleThumbnailsOn = sinon.spy();
+    const toggleThumbnailsOn = jest.fn();
     const wrapper = shallow(<Spotlight photo={testPhoto} toggleThumbnailsOn={toggleThumbnailsOn} />); 
     wrapper.find('.toggle-thumbnails').simulate('mouseEnter');
-    expect(toggleThumbnailsOn.calledOnce).toEqual(true);
+    expect(toggleThumbnailsOn.mock.calls.length).toEqual(1);
   });
 
   it('should invoke toggleThumbnailsOff on user click on "hide photos list"', () => {
     const testPhoto = {photoId: 2, url: 'testUrl', caption: 'testCaption'};
-    const toggleThumbnailsOff = sinon.spy();
+    const toggleThumbnailsOff = jest.fn();
     const wrapper = shallow(<Spotlight photo={testPhoto} toggleThumbnailsOff={toggleThumbnailsOff} />); 
     wrapper.find('.shown-thumbnails').simulate('click');
-    expect(toggleThumbnailsOff.calledOnce).toEqual(true);
+    expect(toggleThumbnailsOff.mock.calls.length).toEqual(1);
   });
 });
