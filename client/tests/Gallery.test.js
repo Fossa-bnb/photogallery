@@ -3,6 +3,7 @@ import Gallery from '../src/Gallery';
 import Spotlight from '../src/Spotlight';
 import { shallow } from 'enzyme';
 import { mount } from 'enzyme';
+import sinon from 'sinon';
 
 describe ('Unit test for <Gallery /> Component', () => {
   it('should render a div with class name "gallery"', () => {
