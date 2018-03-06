@@ -1,6 +1,7 @@
 import React from 'react';
 import Photos from '../src/Photos';
 import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Unit Test for <Photos /> Component', () => {
   it('should render a div with class "photos-module"', () => {
@@ -16,5 +17,11 @@ describe('Unit Test for <Photos /> Component', () => {
   it('should have a toggleGalleryView function', () => {
     const wrapper = shallow(<Photos />);
     expect(wrapper.instance().toggleGalleryView).toBeDefined();
+  });
+
+  it('should change galleryView state to true when toggleGalleryView is invoked', () => {
+    const wrapper = shallow(<Photos />);
+    wrapper.instance().toggleGalleryView();
+    expect(wrapper.state().galleryView).toEqual(true);
   });
 });

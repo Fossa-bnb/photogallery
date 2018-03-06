@@ -23,7 +23,7 @@ class Gallery extends React.Component {
 
   // make current spotlight slide using thumbnail click
   makeCurrentSlide(n) {
-    this.showSlides(this.state.slideIndex = n)
+    this.showSlides(n)
   }
 
   toggleThumbnailsOn() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from '../src/Banner';
 import { shallow } from 'enzyme';
+import sinon from 'sinon';
 
 describe('Unit test for <Banner /> Component', () => {
   it('should render a banner with class name "banner"', () => {
@@ -18,4 +19,12 @@ describe('Unit test for <Banner /> Component', () => {
     const wrapper = shallow(<Banner />);
     expect(wrapper.find('button').text()).toEqual('View Photos');
   });
+
+  it('should invoke toggleGalleryView on banner click', () => {
+    const toggleGalleryView = sinon.spy();
+    const wrapper = shallow(<Banner toggleGalleryView={toggleGalleryView}/>);
+    wrapper.find('.banner').simulate('click');
+    expect(toggleGalleryView.calledOnce).toEqual(true);
+  });
+
 });
