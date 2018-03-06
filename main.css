@@ -12,6 +12,7 @@
   height: 32em;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .banner:hover {
@@ -83,6 +84,7 @@ button {
   border: none;
   -webkit-transition: opacity .2s linear;
   transition: opacity .2s linear;
+  cursor: pointer;
 }
 
 .banner:hover button {

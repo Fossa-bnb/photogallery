@@ -18,4 +18,12 @@ describe('Unit Test for <Thumbnail /> Component', () => {
     const component = (<Thumbnail photoId={15} />);
     expect(component.props.photoId).toEqual(15);
   });
+
+  it('should call makeCurrentSlide on click of thumbnail', () => {
+    const makeCurrentSlide = jest.fn();
+    const wrapper = shallow(<Thumbnail makeCurrentSlide={makeCurrentSlide} />);
+    wrapper.find('.thumbnail-img').simulate('click');
+    expect(makeCurrentSlide.mock.calls.length).toEqual(1);
+  });
+
 });

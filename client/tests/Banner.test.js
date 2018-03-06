@@ -18,4 +18,12 @@ describe('Unit test for <Banner /> Component', () => {
     const wrapper = shallow(<Banner />);
     expect(wrapper.find('button').text()).toEqual('View Photos');
   });
+
+  it('should invoke toggleGalleryView on banner click', () => {
+    const toggleGalleryView = jest.fn();
+    const wrapper = shallow(<Banner toggleGalleryView={toggleGalleryView}/>);
+    wrapper.find('.banner').simulate('click');
+    expect(toggleGalleryView.mock.calls.length).toEqual(1);
+  });
+
 });
