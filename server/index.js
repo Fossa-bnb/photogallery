@@ -4,6 +4,8 @@ const path = require('path');
 const retrievePhotos = require('../db/model.js');
 const cors = require('cors');
 
+const port = process.env.port || 3000;
+
 app.use(cors());
 
 app.use('/', (req, res, next) => {
@@ -23,6 +25,6 @@ app.get('/:id', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('...listening to port 3000');
+app.listen(port, () => {
+  console.log(`...listening to port ${port}`);
 });

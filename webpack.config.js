@@ -1,3 +1,6 @@
+const path = require('path');
+const webpack = require('webpack');
+
 module.exports = {
   devtool: 'inline-source-map',
   entry: [
@@ -24,4 +27,9 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
+  plugins: [
+    new webpack.EnvironmentPlugin([
+      'photos_url',
+    ]),
+  ],
 };

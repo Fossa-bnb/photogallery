@@ -5,6 +5,8 @@ import Gallery from './Gallery';
 import DisplayMode from './DisplayMode';
 import styles from './styles.css';
 
+const url = process.env.photos_url || 'http://localhost:3000/';
+
 class Photos extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +19,7 @@ class Photos extends React.Component {
   componentDidMount() {
     const id = this.props.id;
     $.ajax({
-      url: `http://localhost:3000/${id}`,
+      url: `${url}/${id}`,
       method: "GET",
       success: ({photos}) => {
         console.log(`Successful GET request for photos of ${id}`);
