@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const Room = require('./roomSchema');
 const Promise = require('bluebird');
 
-
 const seedDb = () => {
 
   Room.remove({}, (err) => {
@@ -112,8 +111,9 @@ const seedDb = () => {
     'The receiver is as bad as the thief.',
     'To wait and be patient soothes many a pang.',
     'Bread never falls but on its buttered side.']
-
+  /*
   const imageUrlsSource = ['http://lorempixel.com/800/500/animals/8/', 'http://lorempixel.com/800/500/abstract/3/', 'http://lorempixel.com/800/500/abstract/7/', 'http://lorempixel.com/800/500/abstract/4/', 'http://lorempixel.com/800/500/abstract/5/', 'http://lorempixel.com/800/500/abstract/1/', 'http://lorempixel.com/800/500/abstract/2/', 'http://lorempixel.com/800/500/animals/7/', 'http://lorempixel.com/800/500/animals/6/', 'http://lorempixel.com/800/500/animals/5/', 'http://lorempixel.com/800/500/animals/4/', 'http://lorempixel.com/800/500/animals/3/', 'http://lorempixel.com/800/500/animals/2/', 'http://lorempixel.com/800/500/animals/8/', 'http://lorempixel.com/800/500/animals/1/', 'http://lorempixel.com/800/500/animals/9/', 'http://lorempixel.com/800/500/cats/7/', 'http://lorempixel.com/800/500/cats/3/', 'http://lorempixel.com/800/500/city/4/', 'http://lorempixel.com/800/500/city/8/', 'http://lorempixel.com/800/500/city/2/', 'http://lorempixel.com/800/500/city/1/', 'http://lorempixel.com/800/500/city/5/', 'http://lorempixel.com/800/500/city/6/', 'http://lorempixel.com/800/500/city/9/', 'http://lorempixel.com/800/500/city/10/', 'http://lorempixel.com/800/500/sports/1/', 'http://lorempixel.com/800/500/sports/2/', 'http://lorempixel.com/800/500/sports/3/', 'http://lorempixel.com/800/500/sports/4/', 'http://lorempixel.com/800/500/sports/5/', 'http://lorempixel.com/800/500/sports/6/', 'http://lorempixel.com/800/500/sports/7/', 'http://lorempixel.com/800/500/sports/8/', 'http://lorempixel.com/800/500/sports/9/', 'http://lorempixel.com/800/500/fashion/1/', 'http://lorempixel.com/800/500/fashion/2/', 'http://lorempixel.com/800/500/fashion/3/', 'http://lorempixel.com/800/500/fashion/4/', 'http://lorempixel.com/800/500/fashion/5/', 'http://lorempixel.com/800/500/fashion/6/', 'http://lorempixel.com/800/500/fashion/7/', 'http://lorempixel.com/800/500/fashion/8/', 'http://lorempixel.com/800/500/fashion/9/', 'http://lorempixel.com/800/500/nature/1/', 'http://lorempixel.com/800/500/nature/2/', 'http://lorempixel.com/800/500/nature/3/', 'http://lorempixel.com/800/500/nature/4/', 'http://lorempixel.com/800/500/nature/5/', 'http://lorempixel.com/800/500/nature/6/', 'http://lorempixel.com/800/500/nature/7/', 'http://lorempixel.com/800/500/nature/8/', 'http://lorempixel.com/800/500/nature/9/', 'http://lorempixel.com/800/500/nature/10/', 'http://lorempixel.com/800/500/food/1/', 'http://lorempixel.com/800/500/food/2/', 'http://lorempixel.com/800/500/food/3/', 'http://lorempixel.com/800/500/food/4/', 'http://lorempixel.com/800/500/food/5/', 'http://lorempixel.com/800/500/food/6/', 'http://lorempixel.com/800/500/food/7/', 'http://lorempixel.com/800/500/food/8/', 'http://lorempixel.com/800/500/food/9/', 'http://lorempixel.com/800/500/food/10/', 'http://lorempixel.com/800/500/nightlife/1/', 'http://lorempixel.com/800/500/nightlife/2/', 'http://lorempixel.com/800/500/nightlife/3/', 'http://lorempixel.com/800/500/nightlife/4/', 'http://lorempixel.com/800/500/nightlife/5/', 'http://lorempixel.com/800/500/nightlife/6/', 'http://lorempixel.com/800/500/nightlife/7/', 'http://lorempixel.com/800/500/nightlife/8/', 'http://lorempixel.com/800/500/nightlife/9/', 'http://lorempixel.com/800/500/nightlife/10/', 'http://lorempixel.com/800/500/technics/1/', 'http://lorempixel.com/800/500/technics/2/', 'http://lorempixel.com/800/500/technics/3/', 'http://lorempixel.com/800/500/technics/4/', 'http://lorempixel.com/800/500/technics/5/', 'http://lorempixel.com/800/500/technics/6/', 'http://lorempixel.com/800/500/technics/7/', 'http://lorempixel.com/800/500/technics/8/', 'http://lorempixel.com/800/500/technics/9/', 'http://lorempixel.com/800/500/technics/10/', 'http://lorempixel.com/800/500/transport/1/', 'http://lorempixel.com/800/500/transport/2/', 'http://lorempixel.com/800/500/transport/3/', 'http://lorempixel.com/800/500/transport/4/', 'http://lorempixel.com/800/500/transport/5/', 'http://lorempixel.com/800/500/transport/6/', 'http://lorempixel.com/800/500/transport/7/', 'http://lorempixel.com/800/500/transport/8/', 'http://lorempixel.com/800/500/transport/9/', 'http://lorempixel.com/800/500/transport/10/'];
+  */
 
   const rooms = [];
 
@@ -133,7 +133,10 @@ const seedDb = () => {
     for (let j = 1; j <= numPhotos; j += 1) {
       const photoObj = {
         photoId: j,
-        url: imageUrlsSource[Math.floor(Math.random() * 95)],
+        // with lorem pixel
+        // url: imageUrlsSource[Math.floor(Math.random() * 95)],
+        // now with picsum
+        url: `https://picsum.photos/800/500/?image=10${Math.floor(Math.random() * 100)}`,
         caption: captionsSource[Math.floor(Math.random() * 100)],
       };
       photosArray.push(photoObj);
