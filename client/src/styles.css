@@ -20,13 +20,13 @@
   cursor: pointer;
 }
 
-.banner-background {
+.bannerBackground {
   cursor: pointer;
   margin: 0;
   background-color: white;
 }
 
-.left_img {
+.leftImg {
   object-fit: cover;
   margin-right: .25em;
   width: 49.5vw;
@@ -35,35 +35,35 @@
 }
 
 @media screen and (max-width: 750px) {
-  .right_img {
+  .rightImg {
     display: none;
   }
   
-  .left_img {
+  .leftImg {
     width: 100%;
     margin: 0;
   }
 
-  button {
+  .viewBtn {
     opacity: 1;
   }
 }
 
 @media screen and (min-width: 751px) {
-  .banner:hover button {
+  .banner:hover .viewBtn {
     opacity: 1;
   }
-  button {
+  .viewBtn {
     -webkit-transition: opacity .2s linear;
     transition: opacity .2s linear;
   }
 
-  .left_img {
+  .leftImg {
     width: 100%;
   }
 }
 
-.right_img {
+.rightImg {
   margin-left: .25em;
   padding: 0;
   max-width: 53vw;
@@ -71,7 +71,7 @@
   object-fit: cover;
 }
 
-button {
+.viewBtn {
   opacity: 0;
   background-color: white;
   position: absolute;
@@ -87,7 +87,7 @@ button {
   cursor: pointer;
 }
 
-.banner:hover button {
+.banner:hover .viewBtn {
   opacity: 1;
 }
 
@@ -111,7 +111,7 @@ button {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.thumbnail-list {
+.thumbnailList {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -119,17 +119,17 @@ button {
   cursor: pointer;
 }
 
-.thumbnail-img {
+.thumbnailImg {
   width: 100px;
   margin: 0 5px 0 5px;
   opacity: .4;
 }
 
-.thumbnail-img:hover {
+.thumbnailImg:hover {
   opacity: 1;
 }
 
-.spotlight-container {
+.spotlightContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -144,7 +144,7 @@ button {
   cursor: pointer;
 }
 
-.spotlight-img {
+.spotlightImg {
   max-width: 80%;
 }
 
@@ -167,7 +167,7 @@ button {
   -webkit-user-select: none;
 }
 
-.spotlight-info {
+.spotlightInfo {
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -175,19 +175,23 @@ button {
   color: white;
 }
 
-.caption-container {
+.close {
+  cursor: pointer;
+}
+
+.captionContainer {
   display: block;
   float: left;
   text-align: left;
   width: 50em;
 }
 
-.toggle-thumbnails {
+.toggleThumbnails {
   float:right;
   right: 10em;
   cursor: pointer;
 }
 
-.shown-thumbnails {
+.shownThumbnails {
   display: none;
 }

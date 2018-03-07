@@ -2,6 +2,7 @@ import React from 'react';
 import Spotlight from './Spotlight';
 import ThumbnailList from './ThumbnailList';
 import $ from 'jquery';
+import styles from './styles.css';
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -41,8 +42,8 @@ class Gallery extends React.Component {
       showThumbnails: false
     })
 
-    $('.shown-thumbnails').css({'display':'none'});
-    $('.hidden-thumbnails').css({'display': 'block'});
+    $('.shownThumbnails').css({'display':'none'});
+    $('.hiddenThumbnails').css({'display': 'block'});
 
   }
 
@@ -66,13 +67,13 @@ class Gallery extends React.Component {
 
   render() {
     return (
-      <div className="gallery">
-        <span className="close" onClick={this.props.toggleGalleryView}>&#x2715;</span>
+      <div className={ styles.gallery }>
+        <span className={ styles.close } onClick={this.props.toggleGalleryView} >&#x2715;</span>
         
-        <div className="spotlight-container">
+        <div className={ styles.spotlightContainer }>
           
-          <div className="prev" onClick={this.shiftSlide.bind(this, -1)}>
-            <img className="arrow" src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
+          <div className={ styles.prev }onClick={this.shiftSlide.bind(this, -1)}>
+            <img className={ styles.arrow } src="https://www.imaginovation.net/wp-content/themes/imaginovation/images/arrow-left.png"/>
           </div>
 
           <Spotlight 
@@ -83,8 +84,8 @@ class Gallery extends React.Component {
             toggleThumbnailsOff={this.toggleThumbnailsOff.bind(this)}
           />
 
-          <div className="next" onClick={this.shiftSlide.bind(this, 1)}>
-            <img className="arrow" src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
+          <div className={ styles.next } onClick={this.shiftSlide.bind(this, 1)}>
+            <img className={ styles.arrow } src="https://www.timehotel.se/layouts/fullwidth-core/images/icons/arrow-right.png"/>
           </div>
 
         </div>

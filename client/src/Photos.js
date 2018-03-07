@@ -3,6 +3,7 @@ import $ from 'jquery';
 import Banner from './Banner';
 import Gallery from './Gallery';
 import DisplayMode from './DisplayMode';
+import styles from './styles.css';
 
 class Photos extends React.Component {
   constructor(props) {
