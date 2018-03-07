@@ -1,7 +1,7 @@
 module.exports = {
   devtool: 'inline-source-map',
   entry: [
-    './client/src/Photos.js',
+    './client/src/Photos.jsx',
   ],
   module: {
     rules: [
