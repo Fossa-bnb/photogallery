@@ -10,10 +10,10 @@ const Spotlight = ({photo, numPhotos, shiftSlide, toggleThumbnailsOn, toggleThum
           <p id={ styles.caption }>{photo.photoId} / {numPhotos}: &nbsp;{photo.caption}</p>
         </div>
         <div className={ styles.toggleThumbnails } onMouseEnter={toggleThumbnailsOn}>
-          <div className={ styles.hiddenThumbnails} >
+          <div className={ styles.hiddenThumbnails } >
             <p>Show Photo List</p>
           </div>
-          <div className={ styles.shownThumbnails} onClick={toggleThumbnailsOff} >
+          <div className={ styles.shownThumbnails } onClick={toggleThumbnailsOff} >
             <p>Hide Photo List</p>
           </div>
         </div>
