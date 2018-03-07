@@ -26,7 +26,7 @@
   background-color: white;
 }
 
-.left-img {
+.left_img {
   object-fit: cover;
   margin-right: .25em;
   width: 49.5vw;
@@ -35,16 +35,16 @@
 }
 
 @media screen and (max-width: 750px) {
-  .right-img {
+  .right_img {
     display: none;
   }
   
-  .left-img {
+  .left_img {
     width: 100%;
     margin: 0;
   }
 
-  .button {
+  button {
     opacity: 1;
   }
 }
@@ -53,17 +53,17 @@
   .banner:hover button {
     opacity: 1;
   }
-  .button {
+  button {
     -webkit-transition: opacity .2s linear;
     transition: opacity .2s linear;
   }
 
-  .left-img {
+  .left_img {
     width: 100%;
   }
 }
 
-.right-img {
+.right_img {
   margin-left: .25em;
   padding: 0;
   max-width: 53vw;
