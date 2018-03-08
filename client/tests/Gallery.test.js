@@ -27,7 +27,7 @@ describe ('Unit test for <Gallery /> Component', () => {
   it('should increment the state of slideIndex on spotlight image click', () => {
     const testPhotos = [{photoId: 2, url: 'testUrl', caption: 'testCaption'}, {photoId: 3, url: 'testUrl2', caption: 'testCaption2'}];
     const wrapper = mount(<Gallery photos={testPhotos} />);
-    wrapper.find(Spotlight).find('.spotlight-img').simulate('click');
+    wrapper.find(Spotlight).find('.spotlightImg').simulate('click');
     expect(wrapper.state().slideIndex).toEqual(1);
   });
 
