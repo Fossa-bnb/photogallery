@@ -136,7 +136,7 @@ const seedDb = () => {
         // with lorem pixel
         // url: imageUrlsSource[Math.floor(Math.random() * 95)],
         // now with picsum
-        url: `https://picsum.photos/750/475/?image=10${Math.floor(Math.random() * 100)}`,
+        url: `https://picsum.photos/750/475/?image=1${Math.floor(Math.random() * 90) + 10}`,
         caption: captionsSource[Math.floor(Math.random() * 100)],
       };
       photosArray.push(photoObj);
