@@ -5,7 +5,8 @@ import Gallery from './Gallery';
 import DisplayMode from './DisplayMode';
 import styles from './styles.css';
 
-const url = process.env.photos_url || 'http://localhost:3000/';
+const PORT = process.env.PORT || 3000;
+const url = 'http://localhost:${PORT}';
 
 class Photos extends React.Component {
   constructor(props) {

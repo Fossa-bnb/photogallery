@@ -3,8 +3,9 @@ const app = express();
 const path = require('path');
 const retrievePhotos = require('../db/model.js');
 const cors = require('cors');
+require('dotenv').config();
 
-const port = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
@@ -25,6 +26,6 @@ app.get('/:id', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`...listening to port ${port}`);
+app.listen(PORT, () => {
+  console.log(`...listening to port ${PORT}`);
 });

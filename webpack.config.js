@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -28,8 +29,6 @@ module.exports = {
     filename: 'bundle.js',
   },
   plugins: [
-    new webpack.EnvironmentPlugin([
-      'photos_url',
-    ]),
+    new Dotenv(),
   ],
 };
