@@ -26,7 +26,7 @@ describe('Unit Test for <Spotlight /> Component', () => {
     const testPhoto = {photoId: 2, url: 'testUrl', caption: 'testCaption'};
     const toggleThumbnailsOn = jest.fn();
     const wrapper = shallow(<Spotlight photo={testPhoto} toggleThumbnailsOn={toggleThumbnailsOn} />); 
-    wrapper.find('.toggle-thumbnails').simulate('mouseEnter');
+    wrapper.find('.toggleThumbnails').simulate('mouseEnter');
     expect(toggleThumbnailsOn.mock.calls.length).toEqual(1);
   });
 
@@ -34,7 +34,7 @@ describe('Unit Test for <Spotlight /> Component', () => {
     const testPhoto = {photoId: 2, url: 'testUrl', caption: 'testCaption'};
     const toggleThumbnailsOff = jest.fn();
     const wrapper = shallow(<Spotlight photo={testPhoto} toggleThumbnailsOff={toggleThumbnailsOff} />); 
-    wrapper.find('.shown-thumbnails').simulate('click');
+    wrapper.find('.shownThumbnails').simulate('click');
     expect(toggleThumbnailsOff.mock.calls.length).toEqual(1);
   });
 });

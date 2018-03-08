@@ -22,7 +22,7 @@ describe('Unit Test for <Thumbnail /> Component', () => {
   it('should call makeCurrentSlide on click of thumbnail', () => {
     const makeCurrentSlide = jest.fn();
     const wrapper = shallow(<Thumbnail makeCurrentSlide={makeCurrentSlide} />);
-    wrapper.find('.thumbnail-img').simulate('click');
+    wrapper.find('.thumbnailImg').simulate('click');
     expect(makeCurrentSlide.mock.calls.length).toEqual(1);
   });
 

@@ -59,3 +59,5 @@ class Photos extends React.Component {
 }
 
 window.Photos = Photos;
+
+export default Photos;
