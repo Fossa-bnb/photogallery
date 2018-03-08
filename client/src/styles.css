@@ -195,3 +195,7 @@
 .shownThumbnails {
   display: none;
 }
+
+.hiddenThumbnails {
+  display: block;
+}

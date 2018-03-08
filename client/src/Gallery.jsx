@@ -29,21 +29,27 @@ class Gallery extends React.Component {
 
   toggleThumbnailsOn() {
 
+    $(`.${styles.shownThumbnails}`).css({'display':'block'});
+    $(`.${styles.hiddenThumbnails}`).css({'display':'none'});
+
     this.setState({
       showThumbnails: true
     })
+    
 
-    $('.shown-thumbnails').css({'display':'block'});
-    $('.hidden-thumbnails').css({'display': 'none'});
   }
 
   toggleThumbnailsOff() {
+
+
+
+
     this.setState({
       showThumbnails: false
     })
 
-    $('.shownThumbnails').css({'display':'none'});
-    $('.hiddenThumbnails').css({'display': 'block'});
+    $(`.${styles.shownThumbnails}`).css({'display':'none'});
+    $(`.${styles.hiddenThumbnails}`).css({'display': 'block'});
 
   }
 
