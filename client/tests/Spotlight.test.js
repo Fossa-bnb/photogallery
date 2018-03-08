@@ -18,7 +18,7 @@ describe('Unit Test for <Spotlight /> Component', () => {
     const testPhoto = {photoId: 2, url: 'testUrl', caption: 'testCaption'};
     const shiftSlide = jest.fn();
     const wrapper = shallow(<Spotlight photo={testPhoto} shiftSlide={shiftSlide} />); 
-    wrapper.find('.spotlight-img').simulate('click');
+    wrapper.find('.spotlightImg').simulate('click');
     expect(shiftSlide.mock.calls.length).toEqual(1);
   });
 
