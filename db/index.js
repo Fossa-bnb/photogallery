@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongohost = 'database' || 'localhost';
+const mongohost = 'localhost';
 
 mongoose.connect(`mongodb://${mongohost}/photos`);
 
