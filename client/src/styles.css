@@ -34,8 +34,16 @@
   margin-left: 0;
 }
 
+.rightImg {
+  margin-left: .25em;
+  padding: 0;
+  max-width: 53vw;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 750px) {
-  .rightImg {
+  .rightImg1 {
     display: none;
   }
   
@@ -63,13 +71,7 @@
   }
 }
 
-.rightImg {
-  margin-left: .25em;
-  padding: 0;
-  max-width: 53vw;
-  height: 100%;
-  object-fit: cover;
-}
+
 
 .viewBtn {
   opacity: 0;
